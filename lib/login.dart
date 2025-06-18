@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
           if (!mounted) return;
           if (role == 'admin') {
-            Navigator.of(context).pushReplacementNamed('/admin');
+            Navigator.of(context).pushReplacementNamed('/home');
           } else {
             Navigator.of(context).pushReplacementNamed('/home');
           }

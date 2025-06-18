@@ -482,12 +482,14 @@ class _AdminState extends State<Admin> {
           physics: const BouncingScrollPhysics(),
           slivers: [
             // Header dengan logo dan profil
+            // Header dengan logo dan tombol logout
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    // Logo dan text
                     Row(
                       children: [
                         Container(
@@ -531,6 +533,36 @@ class _AdminState extends State<Admin> {
                           ],
                         ),
                       ],
+                    ),
+
+                    // Tombol Logout
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.05),
+                            blurRadius: 10,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: IconButton(
+                        onPressed: _showLogoutDialog,
+                        icon: const Icon(
+                          Icons.logout_rounded,
+                          color: Color(0xFF64748B),
+                          size: 22,
+                        ),
+                        tooltip: 'Logout',
+                        style: IconButton.styleFrom(
+                          padding: const EdgeInsets.all(12),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),

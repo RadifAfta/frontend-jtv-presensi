@@ -8,6 +8,7 @@ import '../utils/constants.dart';
 class UserApiService {
   static const String baseUrl =
       'http://localhost:3000/api'; // Ganti dengan IP server Anda
+      // 'http://192.168.1.182:3000/api'; // Ganti dengan IP server Anda
   static const _storage =
       FlutterSecureStorage(); // Gunakan FlutterSecureStorage
 
